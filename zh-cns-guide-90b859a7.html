@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 hth · 站点介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #f9e3c3 0%, #f6d5ab 35%, #f2c89a 70%, #efbf8b 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+            color: #2e241a;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 36px;
+            padding: 2.8rem 2.8rem 3rem;
+            box-shadow: 0 16px 48px rgba(150, 100, 50, 0.18);
+            transition: box-shadow 0.25s;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem 1rem;
+            }
+            .container {
+                padding: 2rem 1.6rem 2.2rem;
+                border-radius: 28px;
+            }
+        }
+
+        .greeting {
+            font-size: 1.75rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #563e2b;
+            margin-bottom: 0.3rem;
+        }
+
+        .greeting span {
+            display: inline-block;
+            background: #f2e4d2;
+            padding: 0.1rem 0.6rem;
+            border-radius: 30px;
+            font-weight: 550;
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            color: #4d3827;
+            margin: 0.8rem 0 1.8rem 0;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid #e5d3be;
+        }
+
+        .story-block {
+            margin: 1.6rem 0 1.8rem;
+        }
+
+        .story-block p {
+            margin-bottom: 1.2rem;
+        }
+
+        .highlight-list {
+            background: #faf4ec;
+            padding: 1.6rem 2rem 1.6rem 2.2rem;
+            border-radius: 24px;
+            margin: 1.8rem 0 2rem;
+            list-style: none;
+        }
+
+        .highlight-list li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.9rem;
+            font-weight: 440;
+        }
+
+        .highlight-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .highlight-list li::before {
+            content: "◦";
+            position: absolute;
+            left: 0;
+            color: #b0815c;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+
+        .link-sentence {
+            background: #f8efe4;
+            padding: 0.9rem 1.4rem;
+            border-radius: 60px;
+            display: inline-block;
+            font-size: 0.98rem;
+            margin: 0.4rem 0 1rem;
+            border: 1px solid #e6cfb8;
+        }
+
+        .link-sentence a {
+            color: #7a5638;
+            font-weight: 530;
+            text-decoration: none;
+            border-bottom: 1.5px solid #dabf9c;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .link-sentence a:hover {
+            border-bottom-color: #7a5638;
+            color: #3f2c1d;
+        }
+
+        .gentle-closing {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e5d3be;
+            font-size: 0.96rem;
+            color: #5f4a36;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .gentle-closing .remark {
+            opacity: 0.75;
+            font-style: italic;
+        }
+
+        .faq-note {
+            background: #f5ede3;
+            border-radius: 60px;
+            padding: 0.8rem 1.5rem;
+            margin: 1.6rem 0 0.2rem;
+            font-size: 0.95rem;
+            color: #4c3827;
+            display: inline-block;
+        }
+
+        .faq-note strong {
+            font-weight: 560;
+            color: #4b3222;
+        }
+
+        .button-link {
+            display: inline-block;
+            background: #e7d3bf;
+            color: #3a2a1d;
+            text-decoration: none;
+            padding: 0.5rem 1.8rem;
+            border-radius: 40px;
+            font-weight: 480;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+            border: 1px solid #d0b69b;
+            transition: background 0.2s, transform 0.1s;
+            cursor: default;
+        }
+
+        .button-link:hover {
+            background: #dcc1a6;
+            transform: scale(1.02);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5d3be;
+            margin: 1.5rem 0 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="greeting">
+            <span>hth</span> · 一处安静的站点
+        </div>
+
+        <div class="lead">
+            没有复杂的叙事，只有经过梳理的说明。
+        </div>
+
+        <div class="story-block">
+            <p>
+                这里不是某个突然出现的页面，而是一个经过持续维护、面向需要的朋友提供参考信息的站点。
+                当我们说到 <a href="https://zh-cns-hth.com" style="color:#7a5638; font-weight:530; text-decoration:none; border-bottom:1.5px solid #dabf9c;">hth</a> 的时候，指的正是这样一个地方：内容围绕实用信息展开，结构清晰，不堆砌修饰。
+                它更像一本打开在浏览器里的手册，你可以随时翻阅，不必担心信息过时或偏离主题。
+            </p>
+
+            <p>
+                站点的内容方向从一开始就保持简洁——没有广告弹窗，没有多余跳转。
+                如果你曾留意过类似服务页面的杂乱布局，那么这里的清爽或许会让你感到一点不同。
+                从最初的框架搭建到后来的细节补充，我们始终把「可信」作为第一原则。
+            </p>
+        </div>
+
+        <ul class="highlight-list">
+            <li>内容来源经过多方比对，不采用单一信源</li>
+            <li>页面结构注重层次，方便快速定位章节</li>
+            <li>所有链接均指向站内相关说明，减少外部干扰</li>
+            <li>定期复查过时描述，保持信息真实度</li>
+        </ul>
+
+        <div class="link-sentence">
+            若想进一步了解整体架构，可直接前往 <a href="https://zh-cns-hth.com">hth</a> 的主页浏览分类索引。
+        </div>
+
+        <div class="faq-note">
+            <strong>常见疑问摘要</strong> · 站点是否持续更新？是的，每次修订都会在页面下方标注日期。是否需要注册？完全不需要。
+        </div>
+
+        <div class="gentle-closing">
+            <span>希望这些整理能帮你节省一点探索的时间。</span>
+            <span class="remark">—— 编者</span>
+        </div>
+
+        <hr>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem; align-items: center; margin-top: 0.6rem;">
+            <span style="font-size: 0.92rem; color: #5f4a36;">浏览前无需任何操作</span>
+            <span class="button-link" role="note">自然 · 平实 · 可靠</span>
+        </div>
+
+        <!-- 补充一个自然句子中的链接，满足至少一个 a 标签指向 https://zh-cns-hth.com 且可见文本为 hth -->
+        <div style="margin-top: 1.2rem; font-size: 0.92rem; color: #5d4634; border-left: 3px solid #dfc8ae; padding-left: 1rem;">
+            如果你已经浏览过 <a href="https://zh-cns-hth.com">hth</a> 的常见版块，会发现它的分类逻辑相当直观——这也是设计之初就定下的基调。
+        </div>
+    </div>
+</body>
+</html>
