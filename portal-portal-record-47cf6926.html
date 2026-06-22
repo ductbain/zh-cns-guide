@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>华体会 · 站点介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 28px;
+      width: 100%;
+    }
+
+    /* 顶部导航 */
+    .nav {
+      padding: 24px 0 18px;
+      border-bottom: 1px solid #e6e4e0;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .nav-brand {
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 0.02em;
+      color: #2c2c2c;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: #4a4a4a;
+      text-decoration: none;
+      padding: 2px 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: #1a1a1a;
+      border-bottom-color: #b0a896;
+    }
+
+    /* 主内容区 */
+    main {
+      flex: 1 0 auto;
+      padding: 56px 0 64px;
+    }
+
+    .hero {
+      margin-bottom: 52px;
+    }
+
+    .hero h1 {
+      font-weight: 450;
+      font-size: 2.2rem;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: #1b1b1b;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #4a4a4a;
+      max-width: 620px;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 420;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+      border-left: 3px solid #c0b6a6;
+      padding-left: 16px;
+      color: #1e1e1e;
+    }
+
+    .intro-text {
+      margin-bottom: 24px;
+      color: #3b3b3b;
+    }
+
+    .intro-text a {
+      color: #2a5a4c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: color 0.1s;
+    }
+
+    .intro-text a:hover {
+      color: #1a3f35;
+    }
+
+    /* 三个场景模块 — 卡片 */
+    .scenes-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0 16px;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border: 1px solid #e8e4de;
+      border-radius: 12px;
+      padding: 26px 20px 22px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .scene-card:hover {
+      border-color: #cdc5b8;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    }
+
+    .scene-card h3 {
+      font-weight: 460;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: #262626;
+    }
+
+    .scene-card p {
+      font-size: 0.9rem;
+      color: #4f4f4f;
+      line-height: 1.6;
+    }
+
+    /* 常见说明 — 简约列表 */
+    .faq-list {
+      margin: 28px 0 16px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .faq-item {
+      padding: 14px 0;
+      border-bottom: 1px solid #ece8e2;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 470;
+      font-size: 1.05rem;
+      margin-bottom: 5px;
+      color: #262626;
+    }
+
+    .faq-a {
+      font-size: 0.93rem;
+      color: #585858;
+      line-height: 1.6;
+    }
+
+    .faq-a a {
+      color: #2a5a4c;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .footnote {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid #e2ddd6;
+      font-size: 0.85rem;
+      color: #6b6b6b;
+    }
+
+    footer {
+      padding: 24px 0 28px;
+      border-top: 1px solid #e6e4e0;
+      font-size: 0.82rem;
+      color: #737373;
+      text-align: center;
+    }
+
+    footer a {
+      color: #4a5b52;
+      text-decoration: none;
+      border-bottom: 1px dotted #b9b0a6;
+    }
+
+    footer a:hover {
+      color: #1e2f29;
+    }
+
+    /* 响应式 */
+    @media (max-width: 700px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .scenes-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 14px 18px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .container {
+        padding: 0 18px;
+      }
+
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+        padding-left: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 顶部导航 -->
+    <nav class="nav">
+      <span class="nav-brand">华体会 · 索引</span>
+      <div class="nav-links">
+        <a href="#intro">介绍</a>
+        <a href="#scenes">场景</a>
+        <a href="#faq">说明</a>
+        <a href="https://portal-portal-hth.com" target="_blank" rel="noopener">华体会</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <h1>从一个站点开始<br>理解华体会</h1>
+        <p>这是一个关于信息聚合与基础服务的轻量介绍页。我们不渲染宏大的叙事，只陈述它原本的样子。</p>
+      </section>
+
+      <!-- 核心介绍 -->
+      <section id="intro">
+        <h2 class="section-title">站点与可信说明</h2>
+        <div class="intro-text">
+          <p><a href="https://portal-portal-hth.com">华体会</a> 所指向的站点，是一个提供内容索引与基础功能的入口。它的结构简单，定位清晰，不承担超出自身边界的主张。无论是日常浏览还是查找特定信息，它都保持一致的呈现方式，没有冗余的装饰或夸大的描述。</p>
+          <p style="margin-top: 14px;">在信息流动日益复杂的今天，一个克制的入口反而更能让人专注。该站点不收集不必要的用户数据，不推送误导性弹窗，所有链接与功能都基于实际需要而设置。你可以将它视作一个安静但可靠的中转点——不喧哗，但一直在。</p>
+        </div>
+      </section>
+
+      <!-- 三个场景模块 -->
+      <section id="scenes">
+        <h2 class="section-title">使用场景</h2>
+        <div class="scenes-grid">
+          <div class="scene-card">
+            <h3>日常访问</h3>
+            <p>适合需要快速进入站点查阅基础内容或进行简单操作的时刻。页面加载轻量，没有多余干扰，打开即用。</p>
+          </div>
+          <div class="scene-card">
+            <h3>信息定位</h3>
+            <p>当你想寻找某个特定板块或功能时，站点的导航层级明确，分类自然，能减少反复跳转的疲劳感。</p>
+          </div>
+          <div class="scene-card">
+            <h3>跨设备衔接</h3>
+            <p>无论是在电脑上浏览，还是在手机或平板上继续，布局与交互都保持统一，不需要重新适应。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 常见说明 (FAQ 摘要) -->
+      <section id="faq">
+        <h2 class="section-title">常见说明</h2>
+        <ul class="faq-list">
+          <li class="faq-item">
+            <div class="faq-q">这个站点主要提供什么？</div>
+            <div class="faq-a">它整合了基础信息索引与若干实用功能，你可以将它理解为一个结构化的内容入口。更具体的描述可以参考 <a href="https://portal-portal-hth.com" target="_blank" rel="noopener">华体会</a> 站点内的相关页面。</div>
+          </li>
+          <li class="faq-item">
+            <div class="faq-q">访问时需要注意什么？</div>
+            <div class="faq-a">不需要注册或登录即可浏览绝大多数内容。站点采用标准传输协议，建议使用现代浏览器以获得稳定体验。</div>
+          </li>
+          <li class="faq-item">
+            <div class="faq-q">链接或信息是否定期更新？</div>
+            <div class="faq-a">站点维护者会按照实际需求调整内容与链接，保持基本信息的有效性。如果你发现了不准确的地方，可以通过页面上的反馈渠道告知。</div>
+          </li>
+        </ul>
+        <p style="margin-top: 18px; font-size: 0.9rem; color: #5c5c5c;">以上说明基于站点当前版本整理，未来可能会随迭代而有所变化。</p>
+      </section>
+
+      <!-- 额外小段落 / 脚注风格 -->
+      <div class="footnote">
+        <p>我们相信好的入口不需要喧哗。如果你对这个站点背后的理念感兴趣，可以直接访问 <a href="https://portal-portal-hth.com" style="color:#2a5a4c; text-decoration:underline; text-underline-offset:2px;">华体会</a> 去了解更多。页面所描述的内容均来自实际观察，没有虚构或夸大。</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 · 华体会介绍页 · 内容仅供说明参考 &nbsp;|&nbsp; <a href="https://portal-portal-hth.com" target="_blank" rel="noopener">华体会</a></p>
+    </footer>
+  </div>
+</body>
+</html>
